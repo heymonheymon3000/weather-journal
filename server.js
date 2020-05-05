@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = [];
+projectData = {};
 
 // Require dependencies
 const express = require('express');
@@ -41,5 +41,5 @@ app.post('/add', function (request, response) {
         userResponse: request.body.userResponse
     };
 
-    projectData.unshift(newEntry);
+    projectData = newEntry;
 });

@@ -74,10 +74,10 @@ const getAllWeatherData = async (url = '') => {
 };
 
 const updateUI = (data) => {
-    if(data.length > 0) {
-        document.getElementById('date').innerHTML = data[0].date;
-        document.getElementById('temp').innerHTML = data[0].temperature;
-        document.getElementById('content').innerHTML = data[0].userResponse;
+    if(data != null) {
+        document.getElementById('date').innerHTML = data.date;
+        document.getElementById('temp').innerHTML = data.temperature;
+        document.getElementById('content').innerHTML = data.userResponse;
     }
 };
 
